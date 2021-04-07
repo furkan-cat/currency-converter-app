@@ -19,7 +19,7 @@ Type value to see currency from USD Dollar to EUR,TRY,RUB,UAH. I also added wind
 
 [Project-Link](https://daiy-forecast-app.netlify.app/)
 
-<img src="images/project.png" width="1000">
+<img src="images/project.png" width="1500">
 
 #### JavaScript Used
 

@@ -15,7 +15,7 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-Type value to see currency from USD Dollar to EUR,TRY,RUB,UAH. I also added window.onload to fire getDataOnload() function to show you guys 1 dollar currency immediately when page is loaded. If you want to type another value so you can do it by yourself. For some reason AJAX is not working in Internet but in local it ok! 
+Type value to see currency from USD Dollar to EUR,TRY,RUB,UAH. I also added window.onload to fire getDataOnload() function to show you guys 1 dollar currency immediately when page is loaded. If you want to type another value so you can do it by yourself. For some reason AJAX is not working in Internet but in local it's ok! So please download files to check project
 
 [Project-Link](https://quirky-turing-cb4227.netlify.app/)
 

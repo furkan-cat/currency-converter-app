@@ -1,34 +1,75 @@
-"use strict";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-const myInput = document.getElementById("name");
-const dollar = document.getElementById("dollar");
-const euro = document.getElementById("euro");
-const lira = document.getElementById("lira");
-const ruble = document.getElementById("ruble");
-const grivna = document.getElementById("grivna");
+body {
+  width: 100vw;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  font-size: 22px;
+}
 
-const getDataOnload = () => {
-  fetch(
-    `http://api.currencylayer.com/live?access_key=d3174dd674f6831ebfa3ab45b697537c&currencies=EUR,USD,TRY,RUB,UAH&source=USD`
-  )
-    .then((res) => res.json())
-    .then(displayCurrency);
-  myInput.value = 1;
-};
+#main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 300px;
+  height: 70vh;
+  background-size: cover;
+  border-radius: 15px;
+  box-shadow: 2px 8px 6px -7px rgb(0, 0, 0);
+  background-color: #0a146e;
+}
 
-const getData = () => {
-  fetch(
-    `http://api.currencylayer.com/live?access_key=d3174dd674f6831ebfa3ab45b697537c&currencies=EUR,USD,TRY,RUB,UAH&source=USD`
-  )
-    .then((res) => res.json())
-    .then(displayCurrency);
-};
-myInput.addEventListener("input", getData);
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
 
-const displayCurrency = (res) => {
-  euro.innerText = (`${res.quotes.USDEUR}` * myInput.value).toFixed(2);
-  lira.innerText = (`${res.quotes.USDTRY}` * myInput.value).toFixed(2);
-  ruble.innerText = (`${res.quotes.USDRUB}` * myInput.value).toFixed(2);
-  grivna.innerText = (`${res.quotes.USDUAH}` * myInput.value).toFixed(2);
-};
-window.onload = getDataOnload();
+#name {
+  width: 100%;
+  height: 37px;
+  border: none;
+  margin-bottom: 15px;
+  border-radius: 5px;
+}
+
+#name::placeholder {
+  text-align: center;
+}
+
+form {
+  background-color: #ffffff;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+img {
+  width: 30px;
+}
+
+.col {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.col::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: rgb(210, 210, 217);
+}
+
+.col > * {
+  padding: 4px;
+}

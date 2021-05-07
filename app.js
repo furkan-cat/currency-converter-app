@@ -26,9 +26,9 @@ const getData = () => {
 myInput.addEventListener("input", getData);
 
 const displayCurrency = (res) => {
-  euro.innerText = (`${res.quotes.USDEUR}` * myInput.value).toFixed(2);
-  lira.innerText = (`${res.quotes.USDTRY}` * myInput.value).toFixed(2);
-  ruble.innerText = (`${res.quotes.USDRUB}` * myInput.value).toFixed(2);
-  grivna.innerText = (`${res.quotes.USDUAH}` * myInput.value).toFixed(2);
+  euro.textContent = (`${res.quotes.USDEUR}` * myInput.value).toFixed(2);
+  lira.textContent = (`${res.quotes.USDTRY}` * myInput.value).toFixed(2);
+  ruble.textContent = (`${res.quotes.USDRUB}` * myInput.value).toFixed(2);
+  grivna.textContent = (`${res.quotes.USDUAH}` * myInput.value).toFixed(2);
 };
 window.onload = getDataOnload();

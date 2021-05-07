@@ -9,7 +9,7 @@ const grivna = document.getElementById("grivna");
 
 const getDataOnload = () => {
   fetch(
-    `http://api.currencylayer.com/live?access_key=d3174dd674f6831ebfa3ab45b697537c&currencies=EUR,USD,TRY,RUB,UAH&source=USD`
+    "http://api.currencylayer.com/live?access_key=d3174dd674f6831ebfa3ab45b697537c&currencies=EUR,USD,TRY,RUB,UAH&source=USD"
   )
     .then((res) => res.json())
     .then(displayCurrency);
@@ -18,7 +18,7 @@ const getDataOnload = () => {
 
 const getData = () => {
   fetch(
-    `http://api.currencylayer.com/live?access_key=d3174dd674f6831ebfa3ab45b697537c&currencies=EUR,USD,TRY,RUB,UAH&source=USD`
+    "http://api.currencylayer.com/live?access_key=d3174dd674f6831ebfa3ab45b697537c&currencies=EUR,USD,TRY,RUB,UAH&source=USD"
   )
     .then((res) => res.json())
     .then(displayCurrency);
@@ -31,4 +31,5 @@ const displayCurrency = (res) => {
   ruble.textContent = (`${res.quotes.USDRUB}` * myInput.value).toFixed(2);
   grivna.textContent = (`${res.quotes.USDUAH}` * myInput.value).toFixed(2);
 };
+
 window.onload = getDataOnload();
